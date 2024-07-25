@@ -5,6 +5,7 @@ const url : String | undefined = process.env.REACT_APP_DEFAULT
 
 export const getAllTasks = async(): Promise<Task[]> => {
     try{
+        console.log(url)
         let respones = await axios.get(`${url}/Task`);
         return respones.data;
     }catch(err){
